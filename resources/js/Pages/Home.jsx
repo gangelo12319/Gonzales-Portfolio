@@ -4,16 +4,27 @@ import StarField from '../Components/StarField';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 relative">
+    <div className="min-h-screen flex flex-col bg-black relative text-white">
       <Head title="Home | Angelo Gonzales" />
-      <Navbar /> {/* Navbar should appear above */}
-      <StarField /> {/* StarField with dark background */}
-      <main className="flex-grow container mx-auto px-4 py-12 relative z-10">
-        <h1 className="text-5xl font-bold mb-4 text-maroon-600">Hi, I'm Angelo Y. Gonzales</h1>
-        <p className="text-xl text-gray-300 mb-6">
+      <Navbar />
+      <StarField />
+
+      <main className="flex-grow flex flex-col items-center justify-center text-center z-10 relative px-4 py-12">
+        <img
+          src="/img/temp pic.jpg"
+          alt="Profile"
+          className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-maroon-600 shadow-xl mb-6"
+        />
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow">
+          Hi, I'm <span className="text-maroon-400">Angelo Y. Gonzales</span>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8 leading-relaxed">
           A passionate Bachelor of Science in Information Technology student at the University of Mindanao. I love building modern web applications and bringing ideas to life through technology.
         </p>
-        <a href="/projects" className="px-8 py-4 bg-maroon-600 text-white rounded-lg text-lg font-semibold hover:bg-maroon-700 transition">
+        <a
+          href="/projects"
+          className="px-8 py-4 bg-maroon-600 hover:bg-maroon-700 text-white font-medium rounded-full transition duration-300 shadow-lg"
+        >
           View My Projects
         </a>
       </main>
