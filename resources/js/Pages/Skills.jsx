@@ -65,12 +65,20 @@ export default function Skills() {
 
   const certificates = [
     {
-      name: "Computer Systems Servicing NC II",
-      image: "/img/certificates/css-ncii.jpg",
+      name: "Network Security (Certiport)",
+      image: "/img/network-security.png",
     },
     {
-      name: "Network Security (Certiport)",
-      image: "/img/certificates/network-security.jpg",
+      name: "ReactJs (Workshop)",
+      image: "/img/reactjs-workshop.png",
+    },
+    {
+      name: "JavaScript (Workshop)",
+      image: "/img/js-workshop.png",
+    },
+    {
+      name: "Computer Systems Servicing NC II",
+      image: "/img/nc2-cert.png",
     },
   ];
 
@@ -104,25 +112,24 @@ export default function Skills() {
           </section>
 
           <hr className="border-gray-700 my-10" />
-
           <section>
-            <h3 className="text-2xl font-semibold text-gray-300 mb-8">Certifications</h3>
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 justify-center items-start">
-              {certificates.map((cert, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-800 bg-opacity-80 rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300"
-                >
-                  <img
-                    src={cert.image}
-                    alt={cert.name}
-                    className="w-full max-w-md object-contain rounded-lg mb-4"
-                  />
-                  <h4 className="text-lg font-semibold text-white">{cert.name}</h4>
-                </div>
-              ))}
-            </div>
-          </section>
+  <h3 className="text-2xl font-semibold text-gray-300 mb-8">Certifications</h3>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center items-start">
+    {certificates.map((cert, index) => (
+      <div
+        key={index}
+        className="bg-gray-800 bg-opacity-80 rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition-transform duration-300"
+      >
+        <img
+          src={cert.image}
+          alt={cert.name}
+          className="w-full h-auto object-contain rounded-lg mb-4"
+        />
+        <h4 className="text-lg font-semibold text-white">{cert.name}</h4>
+      </div>
+    ))}
+  </div>
+</section>
         </main>
       </div>
     </div>
