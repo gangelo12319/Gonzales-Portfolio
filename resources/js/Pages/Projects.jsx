@@ -18,8 +18,7 @@ export default function Projects() {
             an information management system built to help CHED Region XI store and manage essential graduate verification records.
           </p>
           <p>
-            This full-stack Laravel-based system supports uploading, importing, and managing 
-            large Excel datasets and PDF documents, all through a secure, responsive interface.
+            A full-stack Laravel system with a Vue.js frontend, designed to securely upload, import, and manage large Excel datasets and PDF documents through a responsive and user-friendly interface.
           </p>
         </div>
 
@@ -40,7 +39,7 @@ export default function Projects() {
           {/* Dashboard */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/img/dashboard-screenshot.png"
+              src="/img/1.png"
               alt="Dashboard"
               className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
             />
@@ -66,7 +65,7 @@ export default function Projects() {
           {/* Upload File Page */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/img/upload-file.png"
+              src="/img/2.png"
               alt="Upload File Page"
               className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
             />
@@ -79,7 +78,7 @@ export default function Projects() {
           {/* Import Excel Page */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/img/import-excel.png"
+              src="/img/3.png"
               alt="Import Excel Page"
               className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
             />

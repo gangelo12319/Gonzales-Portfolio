@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className="flex-grow flex flex-col items-center justify-center text-center z-10 relative px-4 py-12">
         <img
-          src="/img/temp pic.jpg"
+          src="/img/img.png"
           alt="Profile"
           className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-maroon-600 shadow-xl mb-6"
         />
@@ -19,7 +19,7 @@ export default function Home() {
           Hi, I'm <span className="text-maroon-400">Angelo Y. Gonzales</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8 leading-relaxed">
-          A passionate Bachelor of Science in Information Technology student at the University of Mindanao. I love building modern web applications and bringing ideas to life through technology.
+          A passionate Bachelor of Science in Information Technology gradute at the University of Mindanao. I love building modern web applications and bringing ideas to life through technology.
         </p>
         <a
           href="/projects"
