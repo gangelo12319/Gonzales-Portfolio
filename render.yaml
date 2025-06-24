@@ -1,17 +1,22 @@
 services:
   - type: web
     name: gonzales-portfolio
-    env: docker
+    env: docker          # Docker is required for any PHP/Laravel app
     plan: free
     region: singapore
+
     envVars:
       - key: APP_ENV
         value: production
+
       - key: APP_URL
         value: https://gonzales-portfolio.onrender.com
-      - key: APP_KEY
+
+      - key: APP_KEY     # you’ll paste the real value in the Render UI
         sync: false
+
       - key: DB_CONNECTION
         value: sqlite
+
       - key: DB_DATABASE
-        value: /tmp/database.sqlite
+        value: /tmp/database.sqlite   # lives in tmp; survives the build but not restarts
