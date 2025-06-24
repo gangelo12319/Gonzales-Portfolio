@@ -4,20 +4,14 @@ services:
     env: docker
     plan: free
     region: singapore
-    buildCommand: ./build.sh
-    startCommand: php artisan serve --host=0.0.0.0 --port=10000
     envVars:
       - key: APP_ENV
         value: production
       - key: APP_URL
         value: https://gonzales-portfolio.onrender.com
       - key: APP_KEY
-        sync: false  # You will add this manually on the dashboard
+        sync: false  # Set manually in dashboard
       - key: DB_CONNECTION
         value: sqlite
       - key: DB_DATABASE
-        value: /data/database.sqlite
-    disk:
-      name: data
-      mountPath: /data
-      sizeGB: 1
+        value: /tmp/database.sqlite
