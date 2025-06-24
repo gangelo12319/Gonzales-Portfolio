@@ -75,14 +75,14 @@ export default function Contact() {
               <FaMapMarkerAlt className="text-maroon-400 text-xl" />
               <div>
                 <h3 className="text-xl font-semibold text-maroon-400">Address</h3>
-                <p className="text-lg">Buhangin, Davao City 8000</p>
+                <p className="text-lg">Purok1 Communal, Buhangin Davao City 8000</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <FaPhone className="text-maroon-400 text-xl" />
               <div>
                 <h3 className="text-xl font-semibold text-maroon-400">Contact #</h3>
-                <p className="text-lg">099613382723</p>
+                <p className="text-lg">09613382723</p>
               </div>
             </div>
             <div className="flex items-center gap-4">

@@ -80,6 +80,14 @@ export default function Skills() {
       name: "Computer Systems Servicing NC II",
       image: "/img/nc2-cert.png",
     },
+     {
+      name: "Computer Systems Servicing NC II",
+      image: "/img/nc2-cert.png",
+    },
+         {
+      name: "CHEDROXI Certificate",
+      image: "/img/CHED-CERTIFICATE.jpg",
+    },
   ];
 
   return (
