@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* app.css */
-
-/* Transition for the page fade-in and fade-out */
 .fade-enter {
     opacity: 0;
 }
