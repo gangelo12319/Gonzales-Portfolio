@@ -1,8 +1,19 @@
 import Navbar from '../Components/Navbar';
 import { Head } from '@inertiajs/react';
 import StarField from '../Components/StarField';
+import { useState, useEffect } from 'react';
 
 export default function Projects() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white relative">
       <Head title="Projects | Angelo Gonzales" />
@@ -23,77 +34,42 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/img/login-screenshot.png"
-              alt="Login Page"
-              className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-semibold mb-2 text-maroon-300">Login Page</h3>
-              <p className="text-gray-400 text-sm">Secure authentication for users to access the system.</p>
+          {[
+            { src: '/img/login-screenshot.png', title: 'Login Page', desc: 'Secure authentication for users to access the system.' },
+            { src: '/img/1.png', title: 'Dashboard', desc: 'Overview of system activity, uploaded files, and user stats.' },
+            { src: '/img/graduate-verifier.png', title: 'Graduate Verifier Page', desc: 'Search and verify graduate records with precision filtering.' },
+            { src: '/img/2.png', title: 'Upload File Page', desc: 'Upload Excel and PDF documents with drag-and-drop ease.' },
+            { src: '/img/3.png', title: 'Import Excel Page', desc: 'Map and import large Excel datasets directly into the system.' },
+            { src: '/img/profile-page.png', title: 'Profile Page', desc: 'View and update personal information' },
+          ].map((item, index) => (
+            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+              <img
+                src={item.src}
+                alt={item.title}
+                onClick={() => setSelectedImage(item.src)}
+                className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
+              />
+              <div className="p-4 text-left">
+                <h3 className="text-xl font-semibold mb-2 text-maroon-300">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/img/1.png"
-              alt="Dashboard"
-              className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-semibold mb-2 text-maroon-300">Dashboard</h3>
-              <p className="text-gray-400 text-sm">Overview of system activity, uploaded files, and user stats.</p>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/img/graduate-verifier.png"
-              alt="Graduate Verifier Page"
-              className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-semibold mb-2 text-maroon-300">Graduate Verifier Page</h3>
-              <p className="text-gray-400 text-sm">Search and verify graduate records with precision filtering.</p>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/img/2.png"
-              alt="Upload File Page"
-              className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-semibold mb-2 text-maroon-300">Upload File Page</h3>
-              <p className="text-gray-400 text-sm">Upload Excel and PDF documents with drag-and-drop ease.</p>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/img/3.png"
-              alt="Import Excel Page"
-              className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-semibold mb-2 text-maroon-300">Import Excel Page</h3>
-              <p className="text-gray-400 text-sm">Map and import large Excel datasets directly into the system.</p>
-            </div>
-          </div>
-          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="/img/profile-page.png"
-              alt="Profile Page"
-              className="w-full object-cover h-60 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-            <div className="p-4 text-left">
-              <h3 className="text-xl font-semibold mb-2 text-maroon-300">Profile Page</h3>
-              <p className="text-gray-400 text-sm">View and update personal information</p>
-            </div>
-          </div>
+          ))}
         </div>
+
+        {selectedImage && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            onClick={() => setSelectedImage(null)}
+          >
+            <img
+              src={selectedImage}
+              alt="Zoomed Screenshot"
+              className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </main>
     </div>
   );
