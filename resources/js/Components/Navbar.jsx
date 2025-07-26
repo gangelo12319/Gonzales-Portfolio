@@ -1,6 +1,6 @@
 import { Link } from '@inertiajs/react';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // optional: use Heroicons, Lucide, etc.
+import { Menu, X } from 'lucide-react'; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,6 @@ export default function Navbar() {
         <span className="text-maroon-400">Angelo</span>G.Dev
       </div>
 
-      {/* Desktop menu */}
       <div className="hidden md:flex space-x-6 text-white font-medium">
         <Link href="/" className="hover:text-maroon-400 transition">Home</Link>
         <Link href="/about" className="hover:text-maroon-400 transition">About</Link>
@@ -20,14 +19,12 @@ export default function Navbar() {
         <Link href="/contact" className="hover:text-maroon-400 transition">Contact</Link>
       </div>
 
-      {/* Mobile menu toggle button */}
       <div className="md:hidden text-white">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile dropdown menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-black/80 backdrop-blur-md text-white flex flex-col items-center space-y-4 py-6 z-10 md:hidden">
           <Link href="/" className="hover:text-maroon-400 transition" onClick={() => setIsOpen(false)}>Home</Link>

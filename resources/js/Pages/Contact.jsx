@@ -62,7 +62,6 @@ export default function Contact() {
             Contact Information
           </h2>
 
-          {/* Contact Info Card */}
           <div className="bg-gray-900 bg-opacity-90 text-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto space-y-6">
             <div className="flex items-center gap-4">
               <FaUser className="text-maroon-400 text-xl" />

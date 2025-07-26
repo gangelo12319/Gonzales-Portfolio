@@ -11,7 +11,6 @@ use Inertia\Inertia;
 |--------------------------------------------------------------------------
 */
 
-// Public Portfolio Pages
 Route::get('/', function () {
     return Inertia::render('Home');
 });
@@ -32,17 +31,14 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
 
-// Dashboard for Authenticated Users
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Profile Routes (Auth required)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Auth Routes (Login, Register, Forgot Password, etc.)
 require __DIR__.'/auth.php';

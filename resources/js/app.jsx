@@ -4,8 +4,7 @@ import './bootstrap';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
-import { CSSTransition, TransitionGroup } from 'react-transition-group'; // Import Transition Libraries
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
 const appName = import.meta.env.VITE_APP_NAME || 'Angelo Gonzales | Portfolio';
 
 createInertiaApp({
@@ -13,7 +12,7 @@ createInertiaApp({
         if (title) {
             return `${title}`;
         }
-        return appName; // Default title when no title is passed
+        return appName; 
     },
     resolve: (name) =>
         resolvePageComponent(
@@ -26,7 +25,7 @@ createInertiaApp({
         root.render(
             <TransitionGroup>
                 <CSSTransition
-                    key={window.location.pathname} // Ensure the key changes for each page route
+                    key={window.location.pathname} 
                     classNames="fade"
                     timeout={300}
                 >

@@ -10,5 +10,5 @@ export default defineConfig({
         }),
         react(),
     ],
-    base: '/build/', // ✅ Needed so assets resolve correctly
+    base: '/build/',
 });

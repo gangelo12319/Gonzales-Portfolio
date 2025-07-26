@@ -14,7 +14,7 @@ export default function Projects() {
 
         <div className="max-w-4xl mx-auto mb-12 text-gray-300 text-lg leading-relaxed">
           <p className="mb-4">
-            One of my most significant projects is the <span className="font-semibold text-white">CHED RO XI So Verifier</span> — 
+            One of my most significant projects is the <span className="font-semibold text-white">CHED RO XI So Verifier</span> —
             an information management system built to help CHED Region XI store and manage essential graduate verification records.
           </p>
           <p>
@@ -23,7 +23,6 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Login Page */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/img/login-screenshot.png"
@@ -36,7 +35,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Dashboard */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/img/1.png"
@@ -49,7 +47,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Graduate Verifier Page */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/img/graduate-verifier.png"
@@ -62,7 +59,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Upload File Page */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/img/2.png"
@@ -75,7 +71,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Import Excel Page */}
           <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/img/3.png"
@@ -87,8 +82,7 @@ export default function Projects() {
               <p className="text-gray-400 text-sm">Map and import large Excel datasets directly into the system.</p>
             </div>
           </div>
-                    {/* Import Excel Page */}
-                    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             <img
               src="/img/profile-page.png"
               alt="Profile Page"
